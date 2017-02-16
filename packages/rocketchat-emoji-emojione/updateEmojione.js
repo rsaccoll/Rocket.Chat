@@ -1,8 +1,7 @@
 
 var fs = require('fs');
-//var assert = require('assert')
 
-//var emojiList = JSON.parse(fs.readFileSync('emoji.json', 'utf-8'));
+var switchEmoji = JSON.parse(fs.readFileSync('emoji.json', 'utf-8'));
 
 /**
  * Open the emoji.js, search for the "thumbs up"
@@ -10,10 +9,11 @@ var fs = require('fs');
  * it's a hack, but kind of fix the bug for now.
  */
 
-var stringfied = JSON.stringify(fs.readFileSync('emoji.json', 'utf-8'));
+var emojisByCategory = {};
+//var fulano = stringfied.replace(/"aliases":[":+1:",":thumbup:"]/gm, '"aliases":[":+1:",":thumbup:","(y)","(Y)"]');
+for (var emoji in switchEmoji) {
+    if(switchEmoji.hasOwnProperty(emoji)) {
 
-
-stringfied = stringfied.replace(/"aliases":[":+1:",":thumbup:"]/gm, '"aliases":[":+1:",":thumbup:","(y)","(Y)"]');
-
-stringfied.save();  
+    }
+} 
 
