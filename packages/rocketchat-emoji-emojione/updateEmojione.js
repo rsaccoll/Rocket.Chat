@@ -9,21 +9,25 @@ var switchEmoji = JSON.parse(fs.readFileSync('emoji.json', 'utf-8'));
  * it's a hack, but kind of fix the bug for now.
  */
 
+var emojisByCategory = {};
+/*
+            if(emojisByCategory[switchEmoji[emoji].unicode] == "1f4af) {
+            console.log("eita.. "+JSON.stringify(emojisByCategory, null, '\t') + ';'));
+}
+*/
 
 //var fulano = stringfied.replace(/"aliases":[":+1:",":thumbup:"]/gm, '"aliases":[":+1:",":thumbup:","(y)","(Y)"]');
 for (var emoji in switchEmoji) {
+
     if(switchEmoji.hasOwnProperty(emoji)) {
         var thumbs = emoji.indexOf("thumbsup")
         //var thumbs = emoji.hasOwnProperty("thumbsup")
             if(thumbs === 0) {
-                console.log("mas que merda ein? "+ emoji);
-                if(thumbs.hasOwnProperty("thumbsup")) {
-                    console.log("sera que vai? "+ emoji);
-                } else {
-                    console.log("falhou..."+ emoji)
-                }
+                console.log("resultado: "+ emoji);
 
             }
     }
-} 
+
+}    
+
 
